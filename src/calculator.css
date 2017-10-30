@@ -1,0 +1,84 @@
+.calculator {
+  background-color: #000000;
+  min-height: 375px;
+  min-width: 230px;
+  padding: 70px 10px 10px;
+  z-index: 1;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .calcultator {
+      transform: scale(1.3);
+    }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+.buttons {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(5, 50px);
+  padding-top: 5px;
+}
+
+.zero {
+  grid-column: 1 / span 2;
+  padding-left: 18px;
+  text-align: left;
+}
+
+.clear, .invert, .percent {
+  background-color: #a6a6a6;
+}
+
+.clear:active, .invert:active, .percent:active {
+  background-color: #ffffff;
+}
+
+.zero, .decimal, .one, .two, .three, .four, .five, .six, .seven, .eight, .nine {
+  background-color: #333333;
+  color: #ffffff;
+}
+.zero:active, .decimal:active, .one:active, .two:active, .three:active, .four:active, .five:active, .six:active, .seven:active, .eight:active, .nine:active {
+  background-color: #777676;
+}
+
+.divide, .multiply, .subtract, .add, .equal {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+.clickedOperator {
+  background-color: #ffffff;
+  color: #ff9500;
+  transition: all 0.4s cubic-bezier(.92, .15, .84, .51);
+}
+
+.equal:active {
+  background-color: #fccc88;
+}
+
+.calculator.visible{
+  animation: scale 2.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0.85);
+    }
+    to {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,25 @@
+p {
+  color: #ffffff;
+  font: bold 40px helvetica;
+  left: 50px;
+  max-width: 750px;
+  padding-right: 50px;
+  position: absolute;
+  top: 0;
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+}
+
+.visible {
+  background-color: #000000;
+}
+
+.hidden {
+  background-color: #ffffff;
+  opacity: 0;
+  transition: all 2s;
+}
